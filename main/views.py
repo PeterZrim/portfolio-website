@@ -97,6 +97,11 @@ class BaseContextMixin:
         context['gallery_images'] = GalleryImage.objects.all().order_by('?')[:5]  # Random 5 images
         return context
 
+def get_weather_view(request):
+    """API endpoint for getting weather data"""
+    weather_data = get_weather_data()
+    return JsonResponse({'weather_data': weather_data})
+
 def home(request):
     """Home page view"""
     context = {
