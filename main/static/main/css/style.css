@@ -1,0 +1,192 @@
+/* Custom styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    position: relative;
+    min-height: 100vh;
+    background: #f8f9fa;
+}
+
+/* Background slideshow */
+.bg-slideshow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.bg-slideshow .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px) brightness(1.1);  /* Povečana svetlost za bolj intenzivne barve */
+    transform: scale(1.1);  /* Prevent white edges from blur */
+    transition: opacity 1.5s ease-in-out;
+}
+
+.bg-slideshow .slide.active {
+    opacity: 0.4;  /* Povečana vidnost ozadja */
+}
+
+/* Content overlay */
+.content-overlay {
+    background: rgba(255, 255, 255, 0.75);  /* Bolj transparentno ozadje */
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+/* Container za vse tri stolpce */
+.columns-container {
+    background: rgba(255, 255, 255, 0.5);  /* Zelo transparentno ozadje */
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar {
+    background-color: #fff;
+    padding: 20px;
+    min-height: 100vh;
+    border-right: 1px solid rgba(0,0,0,0.1);
+}
+
+.sidebar .card {
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.sidebar .card:hover {
+    transform: translateY(-5px);
+}
+
+.jumbotron {
+    background-color: #fff;
+    padding: 4rem 2rem;
+    border-radius: 0.3rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 20px 0;
+}
+
+.card {
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+footer {
+    margin-top: auto;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+/* Weather Widget */
+.weather-info {
+    padding: 10px;
+}
+
+.weather-info img {
+    width: 64px;
+    height: 64px;
+}
+
+.weather-details {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+/* Crypto Widget */
+.crypto-item {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.crypto-item:last-child {
+    border-bottom: none;
+}
+
+/* Calendar */
+#calendar table {
+    font-size: 0.9em;
+}
+
+#calendar th {
+    text-align: center;
+    font-weight: normal;
+}
+
+#calendar td {
+    text-align: center;
+    padding: 5px;
+}
+
+/* Time Display */
+#current-time {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#timezone {
+    font-size: 0.8em;
+    color: #6c757d;
+}
+
+/* About Me */
+.about-me {
+    text-align: left;
+    max-width: 800px;
+    margin: 2rem auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.about-me p {
+    margin-bottom: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+.about-me p:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        min-height: auto;
+        border-right: none;
+        margin-bottom: 20px;
+    }
+    
+    .jumbotron {
+        padding: 2rem 1rem;
+    }
+}

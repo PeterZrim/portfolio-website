@@ -1,0 +1,233 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "Welcome" %} - Pete-Tech{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="columns-container">
+        <div class="row">
+            <!-- Left Banner -->
+            <div class="col-md-3 sidebar">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">{% trans "Current Time" %}</h5>
+                        <div id="current-time" class="display-4"></div>
+                        <div id="timezone" class="text-muted"></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{% trans "Calendar" %}</h5>
+                        <div id="calendar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-6">
+                <!-- Welcome Section -->
+                <div class="jumbotron text-center">
+                    <h1 class="display-4">{% trans "Welcome to Pete-Tech" %}</h1>
+                    <p class="lead">{% trans "Freelance Developer | Music Enthusiast | Technology Explorer" %}</p>
+                    <hr class="my-4">
+                    <p>{% trans "Explore my portfolio to learn more about my work in programming, music, and technology." %}</p>
+                    <a class="btn btn-primary btn-lg" href="{% url 'about' %}" role="button">{% trans "Learn More" %}</a>
+                </div>
+
+                <!-- Portfolio Quick Links -->
+                <div class="row mt-5">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">{% trans "Programming" %}</h5>
+                                <p class="card-text">{% trans "Discover my programming projects and technical skills." %}</p>
+                                <a href="{% url 'programming' %}" class="btn btn-primary">{% trans "View Projects" %}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">{% trans "Music" %}</h5>
+                                <p class="card-text">{% trans "Explore my musical journey and compositions." %}</p>
+                                <a href="{% url 'music' %}" class="btn btn-primary">{% trans "Listen Now" %}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">{% trans "Gallery" %}</h5>
+                                <p class="card-text">{% trans "View a collection of my work and experiences." %}</p>
+                                <a href="{% url 'gallery' %}" class="btn btn-primary">{% trans "Browse Gallery" %}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Banner -->
+            <div class="col-md-3 sidebar">
+                <!-- Weather Widget -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">{% trans "Weather in" %} {{ weather_data.city }}</h5>
+                        {% if weather_data %}
+                            <div class="weather-info text-center">
+                                <img src="https://openweathermap.org/img/w/{{ weather_data.icon }}.png" alt="{% trans 'Weather icon' %}">
+                                <div class="display-4">{{ weather_data.temperature }}°C</div>
+                                <p class="text-capitalize">{{ weather_data.description }}</p>
+                                <div class="weather-details">
+                                    <p>{% trans "Humidity" %}: {{ weather_data.humidity }}%</p>
+                                    <p>{% trans "Wind" %}: {{ weather_data.wind_speed }} m/s</p>
+                                </div>
+                            </div>
+                        {% else %}
+                            <p class="text-center text-muted">{% trans "Weather data unavailable" %}</p>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <!-- Crypto Widget -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{% trans "Cryptocurrency" %}</h5>
+                        {% if crypto_data %}
+                            {% for coin, data in crypto_data.items %}
+                            <div class="crypto-item mb-3">
+                                <h6 class="text-capitalize">{{ coin }}</h6>
+                                <p class="mb-1">{{ data.price|floatformat:2 }} CHF</p>
+                                <p class="{% if data.change_24h > 0 %}text-success{% else %}text-danger{% endif %} small">
+                                    {% if data.change_24h > 0 %}+{% endif %}{{ data.change_24h|floatformat:2 }}%
+                                </p>
+                                <canvas id="{{ coin }}-chart" width="100%" height="50"></canvas>
+                            </div>
+                            {% endfor %}
+                        {% else %}
+                            <p class="text-center text-muted">{% trans "Crypto data unavailable" %}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    #calendar {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+    #calendar table {
+        width: 100%;
+        table-layout: fixed;
+    }
+    #calendar th,
+    #calendar td {
+        padding: 4px;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    #calendar .today {
+        background-color: #007bff;
+        color: white;
+        border-radius: 4px;
+    }
+    .sidebar {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    .sidebar .card {
+        max-width: 100%;
+    }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Time and Timezone
+    function updateTime() {
+        const now = new Date();
+        document.getElementById('current-time').textContent = now.toLocaleTimeString();
+        document.getElementById('timezone').textContent = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    }
+    setInterval(updateTime, 1000);
+    updateTime();
+
+    // Calendar
+    function createCalendar() {
+        const now = new Date();
+        const firstDay = new Date(now.getFullYear(), now.getMonth(), 1);
+        const lastDay = new Date(now.getFullYear(), now.getMonth() + 1, 0);
+        
+        let calendarHtml = '<table class="table table-sm table-bordered">';
+        calendarHtml += '<thead><tr><th colspan="7" class="text-center small">' + 
+                       now.toLocaleString('default', { month: 'long', year: 'numeric' }) + 
+                       '</th></tr>';
+        calendarHtml += '<tr class="small"><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th></tr></thead>';
+        calendarHtml += '<tbody class="small">';
+
+        let date = 1;
+        for (let i = 0; i < 6; i++) {
+            calendarHtml += '<tr>';
+            for (let j = 0; j < 7; j++) {
+                if (i === 0 && j < firstDay.getDay()) {
+                    calendarHtml += '<td></td>';
+                } else if (date > lastDay.getDate()) {
+                    calendarHtml += '<td></td>';
+                } else {
+                    const isToday = date === now.getDate();
+                    calendarHtml += '<td class="' + (isToday ? 'today' : '') + '">' + date + '</td>';
+                    date++;
+                }
+            }
+            calendarHtml += '</tr>';
+            if (date > lastDay.getDate()) break;
+        }
+        calendarHtml += '</tbody></table>';
+        
+        document.getElementById('calendar').innerHTML = calendarHtml;
+    }
+    createCalendar();
+
+    // Crypto Charts
+    {% if crypto_data %}
+        {% for coin, data in crypto_data.items %}
+            const {{ coin }}Data = {{ data.chart_data|safe }};
+            const {{ coin }}Ctx = document.getElementById('{{ coin }}-chart').getContext('2d');
+            new Chart({{ coin }}Ctx, {
+                type: 'line',
+                data: {
+                    labels: {{ coin }}Data.map(d => new Date(d[0]).toLocaleTimeString()),
+                    datasets: [{
+                        label: '{{ coin|title }} Price (CHF)',
+                        data: {{ coin }}Data.map(d => d[1]),
+                        borderColor: '{% if coin == "bitcoin" %}#f7931a{% elif coin == "ethereum" %}#627eea{% else %}#c3a634{% endif %}',
+                        tension: 0.4,
+                        pointRadius: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        x: {
+                            display: false
+                        },
+                        y: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        {% endfor %}
+    {% endif %}
+</script>
+{% endblock %}

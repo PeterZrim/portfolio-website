@@ -1,0 +1,225 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-28 19:22+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3);\n"
+
+#: .\main\templates\main\about.html:5 .\main\templates\main\base.html:27
+msgid "About"
+msgstr "O meni"
+
+#: .\main\templates\main\about.html:5
+msgid "Peter's Portfolio"
+msgstr "Petrov Portfolio"
+
+#: .\main\templates\main\about.html:12
+#, fuzzy
+#| msgid "About"
+msgid "About Me"
+msgstr "O meni"
+
+#: .\main\templates\main\about.html:15
+msgid ""
+"🎵 Music and creativity are my world – I play guitar and piano, write songs, "
+"spin vinyl records, and produce my own music as a DJ and producer."
+msgstr ""
+"🎵 Glasba in ustvarjalnost sta moj svet – igram kitaro in klavir, pišem pesmi, "
+"vrtim vinilne plošče in ustvarjam lastno glasbo kot DJ in producent."
+
+#: .\main\templates\main\about.html:16
+msgid ""
+"📸 I find inspiration in photography and drone videography, blending "
+"technology with art."
+msgstr ""
+"📸 Navdih najdem v fotografiji in snemanju z dronom, kjer združujem "
+"tehnologijo z umetnostjo."
+
+#: .\main\templates\main\about.html:17
+msgid ""
+"🌊 Sailing the open sea is a dream of mine – the freedom of the wind in the "
+"sails fascinates me, even though I haven't tried it yet."
+msgstr ""
+"🌊 Jadranje po odprtem morju je moja sanja – svoboda vetra v jadrih me "
+"očara, čeprav tega še nisem poskusil."
+
+#: .\main\templates\main\about.html:18
+msgid ""
+"🏂 When I'm not creating or coding, you'll find me snowboarding or tackling "
+"trails on my electric mountain bike. I also love the thrill of riding my KTM "
+"Duke motorcycle."
+msgstr ""
+"🏂 Ko ne ustvarjam ali programiram, me najdete na snežni deski ali na "
+"električnem gorskem kolesu. Obožujem tudi vznemirljivo vožnjo z motorjem "
+"KTM Duke."
+
+#: .\main\templates\main\about.html:19
+msgid ""
+"💻 Currently, I'm working as a freelance developer, driven by a passion for "
+"technology and continuously learning new skills through hands-on projects "
+"and challenges."
+msgstr ""
+"💻 Trenutno delam kot samostojni razvijalec, vodi me strast do tehnologije "
+"in nenehno učenje novih veščin skozi praktične projekte in izzive."
+
+#: .\main\templates\main\about.html:23
+msgid "Skills & Technologies"
+msgstr "Znanja in tehnologije"
+
+#: .\main\templates\main\about.html:26
+msgid "Development"
+msgstr "Razvoj"
+
+#: .\main\templates\main\about.html:28
+msgid "Python & Django"
+msgstr "Python in Django"
+
+#: .\main\templates\main\about.html:29
+msgid "JavaScript & React"
+msgstr "JavaScript in React"
+
+#: .\main\templates\main\about.html:30
+msgid "HTML5 & CSS3"
+msgstr "HTML5 in CSS3"
+
+#: .\main\templates\main\about.html:31
+msgid "SQL & Database Design"
+msgstr "SQL in načrtovanje podatkovnih baz"
+
+#: .\main\templates\main\about.html:35
+msgid "Creative"
+msgstr "Ustvarjalnost"
+
+#: .\main\templates\main\about.html:37
+msgid "Music Production"
+msgstr "Produkcija glasbe"
+
+#: .\main\templates\main\about.html:38
+msgid "Photography & Videography"
+msgstr "Fotografija in videografija"
+
+#: .\main\templates\main\about.html:39
+msgid "Drone Operations"
+msgstr "Upravljanje dronov"
+
+#: .\main\templates\main\about.html:40
+msgid "DJ Mixing"
+msgstr "DJ mešanje"
+
+#: .\main\templates\main\base.html:24
+msgid "Home"
+msgstr "Domov"
+
+#: .\main\templates\main\base.html:30 .\main\templates\main\home.html:44
+msgid "Programming"
+msgstr "Programiranje"
+
+#: .\main\templates\main\base.html:33 .\main\templates\main\home.html:53
+msgid "Music"
+msgstr "Glasba"
+
+#: .\main\templates\main\base.html:36 .\main\templates\main\home.html:62
+msgid "Gallery"
+msgstr "Galerija"
+
+#: .\main\templates\main\base.html:67
+msgid "All rights reserved"
+msgstr "Vse pravice pridržane"
+
+#: .\main\templates\main\home.html:5
+msgid "Welcome"
+msgstr "Dobrodošli"
+
+#: .\main\templates\main\home.html:14
+msgid "Current Time"
+msgstr "Trenutni čas"
+
+#: .\main\templates\main\home.html:22
+msgid "Calendar"
+msgstr "Koledar"
+
+#: .\main\templates\main\home.html:32
+msgid "Welcome to Pete-Tech"
+msgstr "Dobrodošli na Pete-Tech"
+
+#: .\main\templates\main\home.html:33
+msgid "Freelance Developer | Music Enthusiast | Technology Explorer"
+msgstr "Samostojni razvijalec | Ljubitelj glasbe | Raziskovalec tehnologije"
+
+#: .\main\templates\main\home.html:35
+msgid ""
+"Explore my portfolio to learn more about my work in programming, music, and "
+"technology."
+msgstr ""
+"Raziščite moj portfolio in spoznajte moje delo v programiranju, glasbi in "
+"tehnologiji."
+
+#: .\main\templates\main\home.html:36
+msgid "Learn More"
+msgstr "Več informacij"
+
+#: .\main\templates\main\home.html:45
+msgid "Discover my programming projects and technical skills."
+msgstr "Odkrijte moje programerske projekte in tehnične veščine."
+
+#: .\main\templates\main\home.html:46
+msgid "View Projects"
+msgstr "Ogled projektov"
+
+#: .\main\templates\main\home.html:54
+msgid "Explore my musical journey and compositions."
+msgstr "Raziščite mojo glasbeno pot in skladbe."
+
+#: .\main\templates\main\home.html:55
+msgid "Listen Now"
+msgstr "Poslušaj zdaj"
+
+#: .\main\templates\main\home.html:63
+msgid "View a collection of my work and experiences."
+msgstr "Oglejte si zbirko mojih del in izkušenj."
+
+#: .\main\templates\main\home.html:64
+msgid "Browse Gallery"
+msgstr "Prebrskaj galerijo"
+
+#: .\main\templates\main\home.html:76
+msgid "Weather in"
+msgstr "Vreme v"
+
+#: .\main\templates\main\home.html:79
+msgid "Weather icon"
+msgstr ""
+
+#: .\main\templates\main\home.html:83
+msgid "Humidity"
+msgstr ""
+
+#: .\main\templates\main\home.html:84
+msgid "Wind"
+msgstr ""
+
+#: .\main\templates\main\home.html:88
+msgid "Weather data unavailable"
+msgstr ""
+
+#: .\main\templates\main\home.html:96
+msgid "Cryptocurrency"
+msgstr ""
+
+#: .\main\templates\main\home.html:109
+msgid "Crypto data unavailable"
+msgstr ""

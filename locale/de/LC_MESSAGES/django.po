@@ -1,0 +1,213 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-28 19:22+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\main\templates\main\about.html:5 .\main\templates\main\base.html:27
+msgid "About"
+msgstr "Über mich"
+
+#: .\main\templates\main\about.html:5
+msgid "Peter's Portfolio"
+msgstr ""
+
+#: .\main\templates\main\about.html:12
+#, fuzzy
+#| msgid "About"
+msgid "About Me"
+msgstr "Über mich"
+
+#: .\main\templates\main\about.html:15
+msgid ""
+"🎵 Music and creativity are my world – I play guitar and piano, write songs, "
+"spin vinyl records, and produce my own music as a DJ and producer."
+msgstr ""
+
+#: .\main\templates\main\about.html:16
+msgid ""
+"📸 I find inspiration in photography and drone videography, blending "
+"technology with art."
+msgstr ""
+
+#: .\main\templates\main\about.html:17
+msgid ""
+"🌊 Sailing the open sea is a dream of mine – the freedom of the wind in the "
+"sails fascinates me, even though I haven't tried it yet."
+msgstr ""
+
+#: .\main\templates\main\about.html:18
+msgid ""
+"🏂 When I'm not creating or coding, you'll find me snowboarding or tackling "
+"trails on my electric mountain bike. I also love the thrill of riding my KTM "
+"Duke motorcycle."
+msgstr ""
+
+#: .\main\templates\main\about.html:19
+msgid ""
+"💻 Currently, I'm working as a freelance developer, driven by a passion for "
+"technology and continuously learning new skills through hands-on projects "
+"and challenges."
+msgstr ""
+
+#: .\main\templates\main\about.html:23
+msgid "Skills & Technologies"
+msgstr ""
+
+#: .\main\templates\main\about.html:26
+msgid "Development"
+msgstr ""
+
+#: .\main\templates\main\about.html:28
+msgid "Python & Django"
+msgstr ""
+
+#: .\main\templates\main\about.html:29
+msgid "JavaScript & React"
+msgstr ""
+
+#: .\main\templates\main\about.html:30
+msgid "HTML5 & CSS3"
+msgstr ""
+
+#: .\main\templates\main\about.html:31
+msgid "SQL & Database Design"
+msgstr ""
+
+#: .\main\templates\main\about.html:35
+msgid "Creative"
+msgstr ""
+
+#: .\main\templates\main\about.html:37
+msgid "Music Production"
+msgstr ""
+
+#: .\main\templates\main\about.html:38
+msgid "Photography & Videography"
+msgstr ""
+
+#: .\main\templates\main\about.html:39
+msgid "Drone Operations"
+msgstr ""
+
+#: .\main\templates\main\about.html:40
+msgid "DJ Mixing"
+msgstr ""
+
+#: .\main\templates\main\base.html:24
+msgid "Home"
+msgstr "Startseite"
+
+#: .\main\templates\main\base.html:30 .\main\templates\main\home.html:44
+msgid "Programming"
+msgstr "Programmierung"
+
+#: .\main\templates\main\base.html:33 .\main\templates\main\home.html:53
+msgid "Music"
+msgstr "Musik"
+
+#: .\main\templates\main\base.html:36 .\main\templates\main\home.html:62
+msgid "Gallery"
+msgstr "Galerie"
+
+#: .\main\templates\main\base.html:67
+msgid "All rights reserved"
+msgstr "Alle Rechte vorbehalten"
+
+#: .\main\templates\main\home.html:5
+msgid "Welcome"
+msgstr "Willkommen"
+
+#: .\main\templates\main\home.html:14
+msgid "Current Time"
+msgstr "Aktuelle Zeit"
+
+#: .\main\templates\main\home.html:22
+msgid "Calendar"
+msgstr "Kalender"
+
+#: .\main\templates\main\home.html:32
+msgid "Welcome to Pete-Tech"
+msgstr "Willkommen bei Pete-Tech"
+
+#: .\main\templates\main\home.html:33
+msgid "Freelance Developer | Music Enthusiast | Technology Explorer"
+msgstr "Freiberuflicher Entwickler | Musikenthusiast | Technologie-Entdecker"
+
+#: .\main\templates\main\home.html:35
+msgid ""
+"Explore my portfolio to learn more about my work in programming, music, and "
+"technology."
+msgstr ""
+"Entdecken Sie mein Portfolio und erfahren Sie mehr über meine Arbeit in "
+"Programmierung, Musik und Technologie."
+
+#: .\main\templates\main\home.html:36
+msgid "Learn More"
+msgstr "Mehr erfahren"
+
+#: .\main\templates\main\home.html:45
+msgid "Discover my programming projects and technical skills."
+msgstr "Entdecken Sie meine Programmierprojekte und technischen Fähigkeiten."
+
+#: .\main\templates\main\home.html:46
+msgid "View Projects"
+msgstr "Projekte ansehen"
+
+#: .\main\templates\main\home.html:54
+msgid "Explore my musical journey and compositions."
+msgstr "Entdecken Sie meine musikalische Reise und Kompositionen."
+
+#: .\main\templates\main\home.html:55
+msgid "Listen Now"
+msgstr "Jetzt anhören"
+
+#: .\main\templates\main\home.html:63
+msgid "View a collection of my work and experiences."
+msgstr "Sehen Sie sich eine Sammlung meiner Arbeiten und Erfahrungen an."
+
+#: .\main\templates\main\home.html:64
+msgid "Browse Gallery"
+msgstr "Galerie durchsuchen"
+
+#: .\main\templates\main\home.html:76
+msgid "Weather in"
+msgstr "Wetter in"
+
+#: .\main\templates\main\home.html:79
+msgid "Weather icon"
+msgstr ""
+
+#: .\main\templates\main\home.html:83
+msgid "Humidity"
+msgstr ""
+
+#: .\main\templates\main\home.html:84
+msgid "Wind"
+msgstr ""
+
+#: .\main\templates\main\home.html:88
+msgid "Weather data unavailable"
+msgstr ""
+
+#: .\main\templates\main\home.html:96
+msgid "Cryptocurrency"
+msgstr ""
+
+#: .\main\templates\main\home.html:109
+msgid "Crypto data unavailable"
+msgstr ""

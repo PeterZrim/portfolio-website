@@ -1,0 +1,73 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Programming - Peter's Portfolio{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mb-4">Programming Projects</h1>
+    
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Carica - Digital Menu System</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Web Development with Django</h6>
+                    <p class="card-text">A modern digital menu system that allows restaurants and bars to manage their menu items through an admin interface. Features include:</p>
+                    <ul class="list-unstyled">
+                        <li>✓ QR Code menu access</li>
+                        <li>✓ Admin dashboard for menu management</li>
+                        <li>✓ Category-based organization</li>
+                        <li>✓ Real-time price updates</li>
+                    </ul>
+                    <p class="card-text"><small class="text-muted">Technologies: Python, Django, Bootstrap, SQLite</small></p>
+                    <a href="https://github.com/pzrq/carica" class="btn btn-primary" target="_blank">View Project</a>
+                    <a href="https://github.com/pzrq/carica#readme" class="btn btn-secondary" target="_blank">Documentation</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Project 2</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Mobile Development</h6>
+                    <p class="card-text">Description of your second major project. Include technologies used and your role.</p>
+                    <a href="#" class="card-link">View Project</a>
+                    <a href="#" class="card-link">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="mt-4 mb-3">Technical Skills</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <h4>Frontend</h4>
+            <ul class="list-unstyled">
+                <li>HTML5/CSS3</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Bootstrap</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h4>Backend</h4>
+            <ul class="list-unstyled">
+                <li>Python</li>
+                <li>Django</li>
+                <li>Node.js</li>
+                <li>RESTful APIs</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h4>Other</h4>
+            <ul class="list-unstyled">
+                <li>Git</li>
+                <li>Docker</li>
+                <li>Azure</li>
+                <li>Database Design</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

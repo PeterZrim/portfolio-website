@@ -1,0 +1,127 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Gallery - Peter's Portfolio{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <h2 class="mb-4">Photo Gallery</h2>
+    
+    <div class="row g-4">
+        {% for image in images %}
+        <div class="col-12 col-sm-6">
+            <div class="card gallery-card" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                 data-img="{% static 'main/images/'|add:image %}">
+                <img src="{% static 'main/images/'|add:image %}" class="card-img-top" alt="{{ image }}">
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Modal for enlarged image -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center p-0">
+                <img src="" class="img-fluid enlarged-image" alt="Enlarged image">
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .gallery-card {
+        cursor: pointer;
+        transition: transform 0.2s;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        border: none;
+        background: transparent;
+    }
+
+    .gallery-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .card-img-top {
+        height: 400px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .modal-xl {
+        max-width: 90vw;
+        margin: 0 auto;
+    }
+
+    .modal-content {
+        background: transparent;
+        border: none;
+    }
+
+    .enlarged-image {
+        max-height: 80vh;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    .modal-body {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .modal-header {
+        border-bottom: none;
+        padding: 0.5rem;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+    }
+
+    .btn-close {
+        background-color: white;
+        opacity: 0.8;
+        margin: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .btn-close:hover {
+        opacity: 1;
+    }
+
+    .modal-backdrop.show {
+        opacity: 0.9;
+    }
+
+    @media (max-width: 768px) {
+        .card-img-top {
+            height: 300px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .card-img-top {
+            height: 250px;
+        }
+    }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('imageModal');
+    const modalImage = modal.querySelector('.enlarged-image');
+    
+    document.querySelectorAll('.gallery-card').forEach(card => {
+        card.addEventListener('click', function() {
+            const imgSrc = this.getAttribute('data-img');
+            modalImage.src = imgSrc;
+        });
+    });
+});
+</script>
+{% endblock %}

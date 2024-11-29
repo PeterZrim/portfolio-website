@@ -1,0 +1,7 @@
+# azure.yaml
+name: portfolio-website
+services:
+  - name: portfolio-website
+    project: .
+    language: python
+    host: appservice

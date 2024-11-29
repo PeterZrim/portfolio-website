@@ -1,0 +1,49 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "About" %} - {% trans "Peter's Portfolio" %}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="about-section">
+                <h1 class="text-center mb-5">{% trans "About Me" %}</h1>
+                
+                <div class="about-me">
+                    <p>{% trans "🎵 Music and creativity are my world – I play guitar and piano, write songs, spin vinyl records, and produce my own music as a DJ and producer." %}</p>
+                    <p>{% trans "📸 I find inspiration in photography and drone videography, blending technology with art." %}</p>
+                    <p>{% trans "🌊 Sailing the open sea is a dream of mine – the freedom of the wind in the sails fascinates me, even though I haven't tried it yet." %}</p>
+                    <p>{% trans "🏂 When I'm not creating or coding, you'll find me snowboarding or tackling trails on my electric mountain bike. I also love the thrill of riding my KTM Duke motorcycle." %}</p>
+                    <p>{% trans "💻 Currently, I'm working as a freelance developer, driven by a passion for technology and continuously learning new skills through hands-on projects and challenges." %}</p>
+                </div>
+
+                <div class="skills-section mt-5">
+                    <h2 class="text-center mb-4">{% trans "Skills & Technologies" %}</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3>{% trans "Development" %}</h3>
+                            <ul class="list-unstyled">
+                                <li>{% trans "Python & Django" %}</li>
+                                <li>{% trans "JavaScript & React" %}</li>
+                                <li>{% trans "HTML5 & CSS3" %}</li>
+                                <li>{% trans "SQL & Database Design" %}</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h3>{% trans "Creative" %}</h3>
+                            <ul class="list-unstyled">
+                                <li>{% trans "Music Production" %}</li>
+                                <li>{% trans "Photography & Videography" %}</li>
+                                <li>{% trans "Drone Operations" %}</li>
+                                <li>{% trans "DJ Mixing" %}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
