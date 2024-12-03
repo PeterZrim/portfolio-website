@@ -3,8 +3,8 @@ from .settings import *
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'pete-tech-portfolio.azurewebsites.net',
-    '.azurewebsites.net'
+    'localhost',
+    '127.0.0.1',
 ]
 
 # Security settings
@@ -17,7 +17,6 @@ X_FRAME_OPTIONS = 'DENY'
 SECURE_HSTS_SECONDS = 31536000
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
-CSRF_TRUSTED_ORIGINS = ['https://pete-tech-portfolio.azurewebsites.net']
 
 # Whitenoise configuration
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

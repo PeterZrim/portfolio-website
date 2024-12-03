@@ -4,6 +4,5 @@ whitenoise==6.5.0
 gunicorn==21.2.0
 Pillow==10.1.0
 django-storages==1.14.2
-azure-storage-blob==12.18.3
 requests==2.31.0
 pytz==2024.1
